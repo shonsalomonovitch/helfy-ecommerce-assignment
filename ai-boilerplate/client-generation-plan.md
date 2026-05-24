@@ -4,7 +4,7 @@ This document summarizes the AI-driven generation plan for the Helfy e-commerce 
 
 **Source of truth**: `client/plan.md`
 
-The frontend was built using Claude Code (model: `claude-sonnet-4-6`) following a structured phase-by-phase approach. Each phase was implemented and verified before proceeding to the next.
+The frontend was built using Cline (VS Code extension) via OpenRouter, following a structured phase-by-phase approach. Each phase was implemented and verified before proceeding to the next.
 
 ---
 

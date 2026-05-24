@@ -212,7 +212,7 @@ This project was built through a structured AI-guided process:
 
 **Tools used**:
 - Cline (VS Code extension) + OpenRouter — backend generation
-- Claude Code (`claude-sonnet-4-6`) — frontend generation
+- Cline + OpenRouter — frontend generation
 
 For the full interaction log: `docs/ai-interactions.md`
 For the full AI blueprint: `ai-boilerplate/`
@@ -261,7 +261,7 @@ For the complete record: `docs/manual-interventions.md`
 - Secrets are not committed. `.env` files are gitignored.
 - `.env.example` files contain only placeholder values.
 - The Cline/OpenRouter API key is not part of the application.
-- The Anthropic API key is not part of the application.
+- The Cline/OpenRouter API key is not part of the application.
 - Passwords are hashed with bcryptjs (10 rounds) and never stored or returned in plain text.
 - All SQL queries use parameterized placeholders.
 - Product prices are calculated server-side; frontend-provided prices are never trusted.

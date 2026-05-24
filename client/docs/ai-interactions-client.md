@@ -2,8 +2,8 @@
 
 Documents how AI tools were used during frontend implementation.
 
-**AI Tool**: Claude Code (claude-sonnet-4-6) via Anthropic CLI
-**Model**: claude-sonnet-4-6
+**AI Tool**: Cline (VS Code extension) via OpenRouter
+**Model**: Coding model selected in Cline via OpenRouter at the time of implementation
 
 ---
 

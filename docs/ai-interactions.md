@@ -15,8 +15,9 @@ Documents the AI tools, models, and prompt strategy used throughout the developm
 
 ### Frontend Development
 
-**Tool**: Claude Code (Anthropic CLI)
-**Model**: `claude-sonnet-4-6`
+**Tool**: Cline (VS Code extension)
+**Provider**: OpenRouter
+**Model**: Coding model selected in Cline via OpenRouter at the time of implementation
 **Usage**: Phase-by-phase frontend implementation following `client/plan.md`
 
 ### Planning and Prompt Refinement
@@ -28,7 +29,7 @@ Planning prompts for both `server/plan.md` and `client/plan.md` were written and
 ## Why These Tools Were Used
 
 - **Cline + OpenRouter**: Provides access to multiple coding models through a single interface, integrates directly into VS Code, and can read and write files in the project context
-- **Claude Code**: Anthropic's official CLI for Claude; provides file-aware code generation with direct filesystem access
+- **Cline + OpenRouter (frontend)**: Same tool and provider used for the backend; consistent AI-assisted workflow across both client and server
 - **Phase-by-phase approach**: Prevents context overflow, keeps each implementation focused, and makes verification manageable
 
 ---
@@ -85,7 +86,7 @@ Final prompts generated:
 
 For the full phase-by-phase outcome record, see `server/docs/ai-interactions-server.md`.
 
-### Frontend (Claude Code)
+### Frontend (Cline + OpenRouter)
 
 | Phase | Prompt Summary | Output |
 |---|---|---|
@@ -132,5 +133,5 @@ See `client/docs/manual-interventions-client.md` and `docs/manual-interventions.
 
 ## No API Keys in This Repository
 
-This repository does not contain any Cline, OpenRouter, or Anthropic API keys.
+This repository does not contain any Cline or OpenRouter API keys.
 All AI tool keys were used locally during development and are not part of the application or its configuration.

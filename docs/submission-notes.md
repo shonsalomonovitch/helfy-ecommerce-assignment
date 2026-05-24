@@ -37,7 +37,7 @@ The project was built in two stages:
 2. The backend was then implemented phase by phase (7 phases), with each phase verified via curl before proceeding
 3. A final review phase standardized error responses and verified security invariants
 
-**Frontend** (Claude Code, `claude-sonnet-4-6`):
+**Frontend** (Cline + OpenRouter):
 1. A comprehensive plan was generated in `client/plan.md`
 2. The frontend was implemented in 8 phases, each verified in the browser
 3. A final polish phase corrected minor routing patterns and styling inconsistencies
@@ -108,7 +108,7 @@ These are intentional MVP tradeoffs documented throughout the codebase.
 This repository does not contain:
 - Any `.env` file with real credentials
 - Any Cline or OpenRouter API key
-- Any Anthropic API key
+- Any Cline/OpenRouter API key beyond what is already listed
 - Any database passwords
 - Any JWT secrets
 

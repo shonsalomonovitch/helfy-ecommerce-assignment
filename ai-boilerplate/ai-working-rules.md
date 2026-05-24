@@ -2,7 +2,7 @@
 
 Rules that govern how AI agents must behave when working on this project.
 
-These rules apply to any AI model (Cline, Claude Code, or other) working in this codebase.
+These rules apply to any AI model working through Cline or any other coding assistant in this codebase.
 
 ---
 
