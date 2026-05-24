@@ -14,7 +14,7 @@ INSERT INTO products (name, description, price, image_url, category, stock) VALU
 
 ('Minimalist Leather Backpack', 'Handcrafted genuine leather backpack with laptop compartment, multiple pockets, and adjustable straps. Perfect for daily commute.', 189.99, 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500', 'Fashion', 32),
 
-('4K Ultra HD Webcam', 'Professional webcam with 4K resolution, auto-focus, built-in microphone, and adjustable tripod. Ideal for streaming and video calls.', 149.99, 'https://images.unsplash.com/photo-1587826080692-f439cd0b70da?w=500', 'Electronics', 89),
+('4K Ultra HD Webcam', 'Professional webcam with 4K resolution, auto-focus, built-in microphone, and adjustable tripod. Ideal for streaming and video calls.', 149.99, 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=500', 'Electronics', 89),
 
 ('Ergonomic Office Chair', 'Premium mesh office chair with lumbar support, adjustable armrests, and breathable fabric. Designed for all-day comfort.', 399.99, 'https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=500', 'Home', 23),
 
