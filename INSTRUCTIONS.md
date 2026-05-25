@@ -6,6 +6,21 @@ Quick-start guide for setting up, running, and reviewing the Helfy E-Commerce Pl
 
 ## Quick Start (TL;DR)
 
+### Option A — Docker (recommended, no local MySQL required)
+
+```bash
+docker compose up --build
+```
+
+Open `http://localhost:5173` in a browser. Everything starts automatically.
+
+> If port 4000 or 5173 is already in use, stop your local dev servers first:
+> ```bash
+> kill $(lsof -ti :4000) 2>/dev/null; kill $(lsof -ti :5173) 2>/dev/null
+> ```
+
+### Option B — Manual (requires local Node.js and MySQL)
+
 ```bash
 # Terminal 1 — Backend
 cd server && npm install && cp .env.example .env
@@ -22,6 +37,14 @@ Open `http://localhost:5173` in a browser.
 ---
 
 ## 1. Prerequisites
+
+### Docker (Option A)
+
+- **Docker Desktop** — `docker --version` and `docker compose version`
+
+No Node.js or MySQL installation required.
+
+### Manual (Option B)
 
 Before starting, ensure the following are installed and running:
 
@@ -191,26 +214,50 @@ The full AI engineering blueprint is in `ai-boilerplate/`:
 
 ## 12. Troubleshooting
 
-### Backend won't start
+### Docker
 
+**Port already in use:**
+```bash
+kill $(lsof -ti :4000) 2>/dev/null; kill $(lsof -ti :5173) 2>/dev/null
+docker compose up
+```
+
+**Server fails to connect to DB on first run:** The healthcheck retries 12 times (5s each). If MySQL takes longer than ~60s to initialise, restart the server container:
+```bash
+docker compose restart server
+```
+
+**Reset everything (wipe DB data):**
+```bash
+docker compose down -v
+docker compose up --build
+```
+
+**View logs for a specific service:**
+```bash
+docker compose logs server
+docker compose logs client
+docker compose logs db
+```
+
+### Manual Setup
+
+**Backend won't start:**
 - Ensure MySQL is running: `brew services list | grep mysql` (macOS)
 - Verify `server/.env` exists and has correct `DB_PASSWORD`
 - Try: `mysql -u root -p -e "SELECT 1"` to confirm MySQL credentials work
 
-### `npm run db:init` fails
-
+**`npm run db:init` fails:**
 - Confirm MySQL is running
 - Confirm `DB_USER` and `DB_PASSWORD` in `.env` are correct
 - If the database already exists from a previous run, the script is safe to re-run
 
-### Frontend shows API errors
-
+**Frontend shows API errors:**
 - Ensure the backend is running on port 4000
 - Verify `client/.env.local` contains `VITE_API_URL=http://localhost:4000`
 - Check browser DevTools → Network tab for failed requests
 
-### Products don't load
-
+**Products don't load:**
 - Confirm `npm run db:init` ran successfully (check for 12 seeded products)
 - Confirm backend is running: `curl http://localhost:4000/api/products`
 

@@ -170,6 +170,21 @@ The JWT token is stored in `localStorage` under the key `token`. This is an MVP 
 
 ## Running with the Backend
 
+### Option A — Docker (recommended)
+
+From the project root, one command starts everything (MySQL, server, client):
+
+```bash
+docker compose up --build
+```
+
+- Frontend: http://localhost:5173
+- Backend: http://localhost:4000
+
+No local Node.js or MySQL required.
+
+### Option B — Manual
+
 Start both servers simultaneously:
 
 **Terminal 1 — Backend:**

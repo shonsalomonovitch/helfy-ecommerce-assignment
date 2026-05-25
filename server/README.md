@@ -106,7 +106,21 @@ JWT_EXPIRES_IN=7d
 
 **⚠️ Important**: Never commit the `.env` file to version control. Use `.env.example` as a template.
 
-## Installation
+## Running with Docker Compose (recommended)
+
+The easiest way to run the full stack is from the project root:
+
+```bash
+docker compose up --build
+```
+
+This starts MySQL, runs `db:init` automatically, and launches the server on port 4000. No local Node.js or MySQL installation required.
+
+See the root `README.md` and `INSTRUCTIONS.md` for full Docker instructions.
+
+---
+
+## Manual Installation
 
 ### Prerequisites
 
@@ -130,7 +144,7 @@ JWT_EXPIRES_IN=7d
    ```bash
    cp .env.example .env
    ```
-   
+
    Edit `.env` and update with your actual values (especially `DB_PASSWORD` and `JWT_SECRET`).
 
 ## Database Setup

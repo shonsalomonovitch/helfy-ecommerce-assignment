@@ -104,13 +104,31 @@ helfy-ecommerce-assignment/
 
 ## Setup Instructions
 
-### Prerequisites
+### Option A — Docker (recommended)
+
+Requires only [Docker Desktop](https://www.docker.com/products/docker-desktop/). No local Node.js or MySQL needed.
+
+```bash
+docker compose up --build
+```
+
+- Frontend: http://localhost:5173
+- Backend: http://localhost:4000
+- MySQL: localhost:3306
+
+The database is initialised and seeded automatically on first start. If port 4000 or 5173 is already in use, stop your local dev servers first.
+
+---
+
+### Option B — Manual
+
+#### Prerequisites
 
 - Node.js v16 or higher
 - MySQL v8 or higher running locally
 - npm
 
-### Backend
+#### Backend
 
 ```bash
 cd server
@@ -145,7 +163,7 @@ npm run dev
 # Backend runs on http://localhost:4000
 ```
 
-### Frontend
+#### Frontend
 
 ```bash
 cd client
